@@ -1,0 +1,15 @@
+$si-main: si-main;
+$si-main-container: si-main-container;
+
+body {
+    background-color: $bg-color;
+    font-family: $base-font-family;
+}
+
+.#{$si-main} {
+    margin-left: $sidenav-width;
+}
+
+.#{$si-main-container} {
+    padding: $si-main-space;
+}

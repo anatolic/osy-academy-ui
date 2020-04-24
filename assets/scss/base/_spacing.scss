@@ -1,0 +1,63 @@
+$si-main-space: 40px;
+
+// Margins
+.m-t-lg {
+    margin-top: $si-main-space;
+}
+
+.m-t-md {
+    margin-top: $si-main-space / 2;
+}
+
+.m-t-sm {
+    margin-top: $si-main-space / 3;
+}
+
+.m-t-xs {
+    margin-top: $si-main-space / 4;
+}
+
+.m-l-lg {
+    margin-left: $si-main-space;
+}
+
+.m-l-md {
+    margin-left: $si-main-space / 2;
+}
+
+.m-l-sm {
+    margin-left: $si-main-space / 3;
+}
+
+.m-r-lg {
+    margin-right: $si-main-space;
+}
+
+.m-r-md {
+    margin-right: $si-main-space / 2;
+}
+
+.m-r-sm {
+    margin-right: $si-main-space / 3;
+}
+
+.m-r-xs {
+    margin-right: $si-main-space / 4;
+}
+
+// Paddings
+.p-t-lg {
+    padding-top: $si-main-space;
+}
+
+.p-t-md {
+    padding-top: $si-main-space / 2;
+}
+
+.p-t-sm {
+    padding-top: $si-main-space / 3;
+}
+
+.p-t-xs {
+    padding-top: $si-main-space / 4;
+}

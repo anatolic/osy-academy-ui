@@ -1,0 +1,44 @@
+$si-bg-color: si-bg-color;
+$si-text-color: si-text-color;
+
+$bg-color: #f8f8f8;
+$white: #fff;
+$grey: #c0c3c9;
+$grey-light: #eceff3;
+$grey-hard: #76797e;
+$grey-hover: #f2f4f7;
+$blue: #1585ff;
+$btn-text-color: #999da5; 
+$gold: #f9c50f;
+$border-color: #e5e8ee;
+$black-light: #1d2025;
+$black: #000;
+
+$colors-list: (
+	bg-color: $bg-color,
+	white: $white,
+	grey: $grey,
+	grey-light: $grey-light,
+	blue: $blue,
+    btn-text-color: $btn-text-color,
+	gold: $gold,
+	border-color: $border-color
+);
+
+/*
+Generating class
+*/
+
+// Background colors
+@each $key, $val in $colors-list {
+	.#{$si-bg-color}--#{$key} {
+		background-color: #{$val};
+	}
+}
+
+// Text colors
+@each $key, $val in $colors-list {
+	.#{$si-text-color}--#{$key} {
+		color: #{$val};
+	}
+}

@@ -1,0 +1,55 @@
+$si-menu: si-menu;
+
+.#{$si-menu} {
+	width: $sidenav-width;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: $white;
+	@include box-shadow(0px, 20px, 40px, 0px, rgba(0, 0, 0, 0.06));
+	height: 100%;
+	box-sizing: border-box;
+	z-index: 3;
+
+	&__logo-wrap {
+		height: $header-height;
+		position: relative;
+		padding-left: $si-main-space;
+		padding-right: $si-main-space;
+		@include flexbox();
+		@include justify-content(space-between);
+		@include align-items(center);
+
+		&:after {
+			content: " ";
+			background-color: $border-color;
+			position: absolute;
+			display: block;
+			width: calc(100% + #{$si-main-space});
+			height: 1px;
+			bottom: -1px;
+			left: - $si-main-space;
+		}
+
+		img {
+			max-width: 150px;
+		}
+    }
+
+    &__item {
+        padding: $si-main-space / 2 $si-main-space;
+        border-left: 6px solid transparent;
+        box-sizing: border-box;
+        @include transition(all .3s linear);
+
+        .icon {
+            color: $grey-hard;
+        }
+
+        &.active,
+        &:hover {
+            border-color: $blue;
+            background-color: $grey-hover;
+        }
+    }
+}

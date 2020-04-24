@@ -1,0 +1,11 @@
+$si-divider: si-divider;
+
+.#{$si-divider} {
+	&__horizontal {
+		border-bottom: 1px solid $grey-light;
+		display: block;
+		clear: both;
+		height: 1px;
+		width: 100%;
+	}
+}

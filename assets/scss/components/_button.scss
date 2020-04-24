@@ -1,0 +1,39 @@
+$si-btn: si-btn;
+$btn-padding: 30px;
+$btn-height: 40px;
+
+%btn {
+    @include typography(13px, 500, $btn-text-color);
+    background-color: $bg-color;
+    padding-left: $btn-padding;
+    padding-right: $btn-padding;
+    // display: inline-block;
+    border: 1px solid $grey-light;
+    border-radius: 2px;
+    height: $btn-height;
+    @include inline-flex();
+    @include align-items(center);
+    letter-spacing: 1px;
+    cursor: pointer;
+    @include transition(border-color .3s linear);
+    
+    &:hover {
+        border-color: $grey;
+    }
+}
+
+.#{$si-btn} {
+    @extend %btn;
+
+    &__with-icon {
+        .icon {
+            font-size: 12px;
+            margin-right: 5px;
+        }
+    }
+
+    &__just-icon {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

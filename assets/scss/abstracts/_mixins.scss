@@ -1,0 +1,58 @@
+@mixin box-shadow($horizontal, $vertical, $radius, $spread, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow: $horizontal $vertical $radius $spread $color;
+		-moz-box-shadow: $horizontal $vertical $radius $spread $color;
+		box-shadow: $horizontal $vertical $radius $spread $color;
+	} @else {
+		-webkit-box-shadow: $horizontal $vertical $radius $spread $color;
+		-moz-box-shadow: $horizontal $vertical $radius $spread $color;
+		box-shadow: $horizontal $vertical $radius $spread $color;
+	}
+}
+// box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.6);
+
+// Typography
+@mixin typography($font-size, $font-weight, $color) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}
+}
+
+// Transition
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}

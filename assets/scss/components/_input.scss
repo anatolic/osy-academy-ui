@@ -1,0 +1,40 @@
+$si-input: si-input;
+
+.#{$si-input} {
+	& {
+		border: none;
+		background-color: $bg-color;
+		height: 55px;
+		width: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+		border-radius: 2px;
+		@include transition(border-color .3s linear);
+		border: 1px solid transparent;
+		@include placeholder {
+			font-family: $base-font-family;
+			color: $grey;
+		}
+
+		&:active,
+		&:focus,
+		&:hover {
+			border-color: $grey;
+			outline: none;
+		}
+	}
+
+	&__with-icon {
+		position: relative;
+
+		.search-icon {
+			position: absolute;
+			right: 30px;
+			cursor: pointer;
+			top: 50%;
+            transform: translateY(-50%);
+			color: $blue;
+			
+		}
+	}
+}
